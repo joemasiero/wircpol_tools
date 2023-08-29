@@ -1,3 +1,5 @@
+#A variety of tools I've found useful for analysis of polarimetry data
+
 import numpy
 import scipy.optimize as sciopt
 import matplotlib.pyplot as plt

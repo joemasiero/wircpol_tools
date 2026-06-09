@@ -32,7 +32,7 @@ if __name__ == "__main__":
     import numpy
     gcontext = ssl.SSLContext() #this is needed to short-circuit an SSL verification error that pops up on Mac OSX for some reason.
     #above is from here: https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error
-    import nss
+    import astropy
     import sys
         
     
@@ -48,8 +48,8 @@ if __name__ == "__main__":
         Hname=n.replace(' ','%20')
     
     #UT date
-    d='2022 12 01'
-    getPosCSV(Hname,nss.Time(d,format='ymd').jd)
+    d='2022-12-01' #leave dashes here for astropy parsing
+    getPosCSV(Hname,astropy.time.Time(d).jd)
     
     
     
